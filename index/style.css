@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #282a35;
+    color: white;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 8px;
+}
+
+.card {
+    margin: 0px 5px 20px 5px;
+    border-radius: 10px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.name-app {
+    font-size: 40px;
+    font-weight: 700;
+    color: black;
+}
+
+.intro-app {
+    font-weight: 400;
+    font-size: 18px;
+    color: #3a3a3a !important;
+    height: 50px;
+}
+
+.about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #04AA6D;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.about-section h1 {
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+    background-color: #282a35;
+    clear: both;
+    display: inline-block;
+    padding: 10px 25px 10px 25px;
+}
+
+.about-section p {
+    font-size: 30px;
+    font-weight: 400;
+    margin: 5px;
+}
+
+.container {
+    padding: 1px 16px;
+}
+
+.container::after,
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: grey;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #282A35;
+    text-align: center;
+    cursor: pointer;
+    width: 70%;
+    font-size: 18px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: black;
+}
+
+@media screen and (max-width:1200px) {
+    .column {
+        width: 50%;
+        display: block;
+    }
+
+    .about-section h1 {
+        font-size: 50px;
+        font-weight: 700;
+    }
+
+    .about-section p {
+        font-size: 25px;
+        font-weight: 400;
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+
+    .about-section h1 {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .about-section p {
+        font-size: 20px;
+        font-weight: 400;
+        margin: 5px;
+    }
+}

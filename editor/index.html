@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="./style.css">
+    <title>0101Explore | Editor</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>0101Explore Editor</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-3 col-s-3 menu">
+            <ul>
+                <li onclick="loadFile()">Load File</li>
+
+                <li onclick="saveFile()">Save</li>
+                <li onclick="undoTxt()">Undo (Ctrl + z)</li>
+                <li onclick="redoTxt()">Redo (Ctrl + y)</li>
+                <li onclick="clearText()">Clear</li>
+                <li onclick="run()">Run</li>
+            </ul>
+        </div>
+
+        <div class="col-6 col-s-9">
+            <div class="tab" id="tab">
+                <button onclick="newTab()">New Tab</button>
+            </div>
+            <div id="txt"></div>
+            <button onclick="closeTab()">Close Tab</button>
+        </div>
+
+        <div class="col-3 col-s-12">
+            <div class="aside">
+                <h2>Editor</h2>
+                <p>Type or Edit your input</p>
+                <h2>Load File</h2>
+                <p>Click Load file to load file from device</p>
+                <h2>Run</h2>
+                <p>Click run to run code html,css,js</p>
+            </div>
+            <br>
+            <div class="menu">
+                <ul>
+                    <li onclick="window.location.href='/'">
+                        Home Page
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <b>Draw</b>
+        &nbsp; Type:
+        <button onclick="changeType(true)">Default</button>
+        <button onclick="changeType(false)">Eraser</button>
+        <button onclick="clearCanvas()">Clear</button> &nbsp;&nbsp;
+        Color:
+        <input id="color" type="color" onchange="changeColor()"> &nbsp;&nbsp;
+
+        Size:
+        <input id="size" size="5" onchange="changeSizeMouse()"> &nbsp;&nbsp;
+
+        <button onclick="uploadImg()">Upload Img</button>
+        <b id="nameImg"></b>
+        <button onclick="saveCanvas()">Save</button>
+    </div>
+    <br>
+    <canvas id="canvas"></canvas>
+    <br>
+    <button onclick="changeSizeCanvas(false)">-size</button>
+    <button onclick="changeSizeCanvas(true)">+size</button>
+
+    <script src="./modules/ace.js"></script>
+    <script src="./main.js"></script>
+    <script src="./canvas.js"></script>
+</body>
+
+</html>
