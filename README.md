@@ -1,4 +1,6 @@
-# 0101explore.github.io
+# Web Editor 
 
-link web site 
-https://0101explore.github.io/
+This web can:
+- Edit text, code
+- Run Front End code 
+- Draw, edit image
